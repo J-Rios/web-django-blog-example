@@ -1,0 +1,29 @@
+# Setup project
+./deploy
+
+# Enter into Viertual enviorement
+source .venv/bin/activate
+
+# Install project requeriments
+pip install -r requeriments.txt
+
+# Create Django project basic skelleton
+django-admin startproject mysite .
+
+# Make the DataBase
+python manage.py migrate
+
+# Make the App
+python manage.py startapp blog
+
+# Create the Model "blog" and apply
+python manage.py makemigrations blog
+python manage.py migrate blog
+
+# Create an Admin user
+python manage.py createsuperuser
+jrios23
+P*12
+
+# Django Shell
+python manage.py shell
